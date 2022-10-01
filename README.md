@@ -43,6 +43,9 @@ Feel free to check the [issues page](https://github.com/DJ-MrJay/bookstore/issue
 ## Show your support
 Give a ⭐️ if you like this project!
 
+## Acknowledgement
+[Zeplin](https://app.zeplin.io/project/5b35a9e13227086040f8eb75/screen/5b695e29bb8c844f118f9378) for the design.
+
 ## License
 This project is [MIT](./MIT.md) licensed.
 
