@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Books from './Books';
+import BookInfos from './BookInfos';
 
 const BookCard = (props) => {
   const { books } = props;
@@ -8,7 +8,7 @@ const BookCard = (props) => {
     <div>
       {books.map((book) => (
         <div key={book.id}>
-          <Books book={book} />
+          <BookInfos book={book} />
         </div>
       ))}
     </div>

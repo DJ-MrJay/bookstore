@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Books = (props) => {
+const BookInfos = (props) => {
   const { book } = props;
   return (
     <>
       <p>
-        Book title:
+        Book Title:&nbsp;
         {book.title}
       </p>
       <p>
-        Book author:
+        Book Author:&nbsp;
         {book.author}
       </p>
       <button type="button">Remove</button>
@@ -18,8 +18,8 @@ const Books = (props) => {
   );
 };
 
-Books.propTypes = {
+BookInfos.propTypes = {
   book: PropTypes.node.isRequired,
 };
 
-export default Books;
+export default BookInfos;
