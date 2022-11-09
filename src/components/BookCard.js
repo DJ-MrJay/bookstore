@@ -6,11 +6,14 @@ import { remBook } from '../redux/books/books';
 function BookCard({ book }) {
   const dispatch = useDispatch();
   return (
-    <div>
-      <h3>{book.title}</h3>
-      <h4>{book.author}</h4>
-      <button type="button" className="remove" onClick={() => dispatch(remBook(book.item_id))}>Remove Book</button>
-    </div>
+    <section>
+      <div>
+        <h3>{book.title}</h3>
+        <h4>{book.author}</h4>
+        <button type="button" onClick={() => dispatch(remBook(book.item_id))}>Remove</button>
+        <hr />
+      </div>
+    </section>
   );
 }
 

@@ -9,9 +9,11 @@ function Categories() {
   return (
     <>
       <div>
-        <button type="button" className="statusBtn" onClick={() => dispatch(checkingStatus())}>
+        <button type="button" onClick={() => dispatch(checkingStatus())}>
           Check Status
         </button>
+        <br />
+        <br />
         <span className="statusMsg">
           {status}
         </span>
