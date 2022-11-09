@@ -16,7 +16,7 @@ function Form() {
   };
 
   const checkValidity = () => {
-    if (!bookTitle) return;
+    if (!bookTitle || !bookAuthor) return;
     const bookObj = {
       title: bookTitle,
       author: bookAuthor,
