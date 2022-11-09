@@ -19,6 +19,5 @@ const checkingStatus = () => ({
   type: CHECKING_STATUS,
 });
 
-// Exports
 export { checkingStatus };
 export default reducer;
