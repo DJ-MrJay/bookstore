@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { remBook } from '../redux/books/books';
+import '../App.css';
 
 function BookCard({ book }) {
   const dispatch = useDispatch();

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
+import '../App.css';
 
 function Form() {
   const [bookTitle, setBookTitle] = useState('');
@@ -26,10 +27,9 @@ function Form() {
   };
 
   return (
-    <section className="addBookContainer">
-      <div className="line" />
-      <span className="addNewBook">ADD NEW BOOK</span>
-      <form className="formContainer">
+    <div>
+      <h3>ADD NEW BOOK</h3>
+      <form>
         <input
           type="text"
           className="inputBookTitle"
@@ -47,10 +47,10 @@ function Form() {
           required
         />
         <button type="submit" className="addBook" onClick={checkValidity}>
-          ADD BOOK
+          Add Book
         </button>
       </form>
-    </section>
+    </div>
   );
 }
 
