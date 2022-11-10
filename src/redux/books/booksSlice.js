@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 // Initial State
 const initialState = [];
 
-const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/juyEYeKeTge7d2ZVOxXe/books';
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/OSuqVqjthBIuZFwhmPiZ/books';
 
 // Async Action Creators
 export const fetchBookApi = createAsyncThunk('fetchBookApi', async () => {
@@ -18,6 +18,7 @@ export const addBookApi = createAsyncThunk('addBookApi', async (input) => {
     item_id: uuidv4(),
     title: input.title,
     author: input.author,
+    category: input.category,
   });
   return response.data;
 });
@@ -36,7 +37,6 @@ const booksSlice = createSlice({
       const books = Object.keys(action.payload)
         .map((bks) => ({
           item_id: bks,
-          currentLesson: `Chapter ${Math.floor(Math.random() * 15)}`,
           ...action.payload[bks][0],
         }));
       return [books];

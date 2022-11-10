@@ -14,8 +14,8 @@ function Categories() {
         </button>
         <br />
         <br />
-        <span className="statusMsg">
-          {status}
+        <span>
+          {status.message}
         </span>
       </div>
     </>

@@ -9,6 +9,7 @@ function BookList() {
 
   useEffect(() => {
     dispatch(fetchBookApi());
+    // eslint-disable-next-line
   }, [books.length]);
 
   if (books.length) {
