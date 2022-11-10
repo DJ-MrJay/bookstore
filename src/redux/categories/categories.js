@@ -1,5 +1,5 @@
 // Action Types
-const CHECKING_STATUS = 'CHECKING_STATUS';
+const CHECKING_STATUS = 'bookstore/categories/CHECKING_STATUS';
 
 // Initial State
 const initialState = [];
@@ -19,6 +19,5 @@ const checkingStatus = () => ({
   type: CHECKING_STATUS,
 });
 
-// Exports
 export { checkingStatus };
 export default reducer;
