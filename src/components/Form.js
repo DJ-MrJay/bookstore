@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books';
-import '../App.css';
+import { addBookApi } from '../redux/books/booksSlice';
 
 function Form() {
   const [bookTitle, setBookTitle] = useState('');
@@ -21,7 +20,7 @@ function Form() {
       title: bookTitle,
       author: bookAuthor,
     };
-    dispatch(addBook(bookObj));
+    dispatch(addBookApi(bookObj));
     setBookTitle('');
     setBookAuthor('');
   };
@@ -46,7 +45,7 @@ function Form() {
           value={bookAuthor}
           required
         />
-        <button type="submit" className="addBook" onClick={checkValidity}>
+        <button type="submit" className="addBookApi" onClick={checkValidity}>
           Add Book
         </button>
       </form>

@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { remBook } from '../redux/books/books';
-import '../App.css';
+import { delBookApi } from '../redux/books/booksSlice';
 
 function BookCard({ book }) {
   const dispatch = useDispatch();
@@ -11,7 +10,7 @@ function BookCard({ book }) {
       <div>
         <h3>{book.title}</h3>
         <h4>{book.author}</h4>
-        <button type="button" onClick={() => dispatch(remBook(book.item_id))}>Remove</button>
+        <button type="button" onClick={() => dispatch(delBookApi(book.item_id))}>Remove</button>
         <hr />
       </div>
     </section>
