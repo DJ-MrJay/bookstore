@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books';
-import '../App.css';
+import { addBookApi } from '../redux/books/booksSlice';
 
 function Form() {
   const [bookTitle, setBookTitle] = useState('');
   const [bookAuthor, setBookAuthor] = useState('');
+  const [bookCategory, setBookCategory] = useState('');
+
   const dispatch = useDispatch();
+
   const handleInputTitle = (bks) => {
     setBookTitle(bks.target.value);
   };
@@ -15,24 +17,29 @@ function Form() {
     setBookAuthor(bks.target.value);
   };
 
+  const handleInputCategory = (bks) => {
+    setBookCategory(bks.target.value);
+  };
+
   const checkValidity = () => {
-    if (!bookTitle || !bookAuthor) return;
+    if (!bookTitle || !bookAuthor || !bookCategory) return;
     const bookObj = {
       title: bookTitle,
       author: bookAuthor,
+      category: bookCategory,
     };
-    dispatch(addBook(bookObj));
+    dispatch(addBookApi(bookObj));
     setBookTitle('');
     setBookAuthor('');
+    setBookCategory('');
   };
 
   return (
-    <div>
+    <section>
       <h3>ADD NEW BOOK</h3>
       <form>
         <input
           type="text"
-          className="inputBookTitle"
           placeholder="Book Title"
           onChange={handleInputTitle}
           value={bookTitle}
@@ -40,17 +47,32 @@ function Form() {
         />
         <input
           type="text"
-          className="inputBookAuthor"
           placeholder="Book Author"
           onChange={handleInputAuthor}
           value={bookAuthor}
           required
         />
-        <button type="submit" className="addBook" onClick={checkValidity}>
-          Add Book
+        <select
+          onChange={handleInputCategory}
+          value={bookCategory}
+          required
+        >
+          <option value="">Select Category</option>
+          <option value="Action">Action</option>
+          <option value="Biography">Biography</option>
+          <option value="Classic">Classic</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Non-Fiction">Non-Fiction</option>
+          <option value="Suspense">Suspense</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Tragedy">Tragedy</option>
+          <option value="Other">Other</option>
+        </select>
+        <button type="submit" onClick={checkValidity}>
+          ADD BOOK
         </button>
       </form>
-    </div>
+    </section>
   );
 }
 
