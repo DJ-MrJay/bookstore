@@ -7,6 +7,7 @@ function Header() {
   const navLinkStyles = ({ isActive }) => ({
     opacity: isActive ? '100%' : '50%',
     textDecoration: isActive ? 'none' : 'none',
+    backgroundColor: isActive ? '#ffffff' : '#ffffff',
   });
   return (
     <section className="headerWrapper">

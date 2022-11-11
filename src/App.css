@@ -12,6 +12,7 @@
   background-color: white;
   display: flex;
   justify-content: space-between;
+  background-color: white;
 }
 
 .headerContainer {
@@ -51,6 +52,7 @@
 
 .bookCardWrapper {
   padding: 1rem 4%;
+  background-color: #fafafa;
 }
 
 .bookCardContainer {
@@ -60,6 +62,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  background-color: white;
 }
 
 .book {
@@ -198,6 +201,7 @@ form button {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  background-color: #fafafa;
 }
 
 .addNewBook {
