@@ -36,6 +36,7 @@ function Form() {
 
   return (
     <section className="addBookContainer">
+      <div className="line-3" />
       <span className="addNewBook">ADD NEW BOOK</span>
       <form>
         <input
