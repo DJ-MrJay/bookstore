@@ -35,8 +35,8 @@ function Form() {
   };
 
   return (
-    <section>
-      <h3>ADD NEW BOOK</h3>
+    <section className="addBookContainer">
+      <span className="addNewBook">ADD NEW BOOK</span>
       <form>
         <input
           type="text"
@@ -57,7 +57,7 @@ function Form() {
           value={bookCategory}
           required
         >
-          <option value="">Select Category</option>
+          <option selected><span className="optionSelected">Select Category</span></option>
           <option value="Action">Action</option>
           <option value="Biography">Biography</option>
           <option value="Classic">Classic</option>

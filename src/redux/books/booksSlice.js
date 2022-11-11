@@ -37,6 +37,8 @@ const booksSlice = createSlice({
       const books = Object.keys(action.payload)
         .map((bks) => ({
           item_id: bks,
+          completed: Math.floor(Math.random() * 100),
+          currentLesson: `Chapter ${Math.floor(Math.random() * 15)}`,
           ...action.payload[bks][0],
         }));
       return [books];
