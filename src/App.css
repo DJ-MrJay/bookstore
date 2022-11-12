@@ -38,6 +38,10 @@
   text-decoration: none;
 }
 
+.nav-links a:hover {
+  color: #0290ff;
+}
+
 .userIcon {
   width: 2rem;
   height: 2rem;
